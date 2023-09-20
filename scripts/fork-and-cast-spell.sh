@@ -9,7 +9,13 @@ anvil_fork_url=$3
 anvil_fork_block_number=$4
 anvil_priv_key=${5-0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80}
 
-anvil --fork-url $anvil_fork_url --fork-block-number $anvil_fork_block_number  &
+if [[ -n $anvil_fork_block_number ]]; then
+    extra_params="--fork-block-number $anvil_fork_block_number"
+else
+    extra_params=""
+fi
+
+anvil --fork-url $anvil_fork_url $extra_params  &
 
 sleep 3
 
