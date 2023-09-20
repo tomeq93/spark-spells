@@ -7,8 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cast:gnosis": "sh scripts/fork-and-cast-spell.sh src/proposals/20230927/SparkGnosis_20230927.sol:SparkGnosis_20230927"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
