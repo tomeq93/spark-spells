@@ -4,10 +4,9 @@ set -e
 trap "kill 0" EXIT
 
 spell_path_or_address=$1
-# default params for gnosis 
-spell_executor=${2-0xc4218C1127cB24a0D6c1e7D25dc34e10f2625f5A}
-anvil_fork_url=${3:-https://rpc.ankr.com/gnosis}
-anvil_fork_block_number=${4:-30031699}
+spell_executor=$2
+anvil_fork_url=$3
+anvil_fork_block_number=$4
 anvil_priv_key=${5-0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80}
 
 anvil --fork-url $anvil_fork_url --fork-block-number $anvil_fork_block_number  &
